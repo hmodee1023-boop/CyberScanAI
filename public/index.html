@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الحصن الرقمي</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<header class="navbar">
+
+<div class="logo">
+<h1>🛡️ الحصن الرقمي</h1>
+<p>CyberScan AI</p>
+</div>
+
+<div class="nav-right">
+
+    <h3 id="welcomeUser"></h3>
+
+    <button id="logoutBtn" class="scan-btn">
+        🚪 تسجيل الخروج
+    </button>
+
+    <div class="bio">
+        طالب أمن سيبراني | مطور CyberScan AI
+    </div>
+
+<button class="scan-btn" onclick="window.location.href='about.html'">
+📖 السيرة الذاتية للمشروع
+</button>
+
+</div>
+
+</header>
+
+<section class="hero">
+
+<h1>Cyber Security Scanner</h1>
+
+<p>
+منصة احترافية لفحص وتحليل أمن المواقع الإلكترونية
+</p>
+
+<div class="scan-box">
+
+<input
+id="target"
+type="text"
+placeholder="https://example.com">
+
+<button
+class="scan-btn"
+onclick="startScan()">
+🔍 بدء الفحص
+</button>
+
+</div>
+
+</section>
+
+<div id="report" class="report-container"></div>
+
+<div class="report-actions">
+
+<button
+id="downloadPdfBtn"
+class="download-btn"
+style="display:none;">
+
+📄 تحميل التقرير PDF
+
+</button>
+
+</div>
+
+<div class="dashboard">
+
+<div class="card stat">
+
+<h2>🔒 درجة الأمان</h2>
+
+<div class="score-circle">
+<div>
+<span id="securityScore">80</span>
+<small id="riskLevel">LOW RISK</small>
+</div>
+</div>
+
+<p>Security Score</p>
+
+</div>
+
+<div class="card info-card">
+<h3>🌍 عنوان IP</h3>
+<p id="ipCard">--</p>
+</div>
+
+<div class="card info-card">
+<h3>⚡ زمن الاستجابة</h3>
+<p id="responseCard">--</p>
+</div>
+
+<div class="card info-card">
+<h3>🔐 SSL</h3>
+<p id="sslCard">--</p>
+</div>
+
+<div class="card info-card">
+<h3>🕒 وقت الفحص</h3>
+<p id="timeCard">--</p>
+</div>
+
+</div>
+<div class="tools">
+
+<div class="tool">
+<i>🛡️</i>
+<h3>SSL</h3>
+<p>فحص شهادة SSL</p>
+</div>
+
+<div class="tool">
+<i>🌐</i>
+<h3>DNS</h3>
+<p>تحليل سجلات DNS</p>
+</div>
+
+<div class="tool">
+<i>📡</i>
+<h3>Headers</h3>
+<p>فحص رؤوس HTTP</p>
+</div>
+
+<div class="tool">
+<i>🔍</i>
+<h3>Ports</h3>
+<p>فحص المنافذ</p>
+</div>
+
+<div class="tool">
+<i>⚠️</i>
+<h3>Security</h3>
+<p>تحليل الأمان</p>
+</div>
+
+<div class="tool">
+<i>📄</i>
+<h3>PDF</h3>
+<p>تحميل التقرير</p>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>🤖 تحليل الذكاء الاصطناعي</h2>
+
+<p>
+يقوم CyberScan AI بتحليل حالة الموقع وإظهار تقييم أمني أولي مع اقتراحات لتحسين الحماية.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>📌 معلومات المشروع</h2>
+
+<p>
+الحصن الرقمي منصة احترافية لتحليل أمن المواقع الإلكترونية وإنشاء تقارير أمنية متقدمة بواجهة حديثة وسهلة الاستخدام.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<h2>📄 صفحات المشروع</h2>
+
+<button onclick="window.location.href='about.html'">
+📄 عن المشروع
+</button>
+
+<button onclick="window.location.href='history.html'">
+📜 سجل الفحوصات
+</button>
+
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

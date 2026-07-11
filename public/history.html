@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>التقارير السابقة - CyberScan AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>📊 التقارير السابقة</h1>
+
+<div id="reports"></div>
+
+<br>
+
+<button class="history-btn" onclick="window.location.href='index.html'">
+🏠 العودة للرئيسية
+</button>
+
+<button class="scan-btn" onclick="clearHistory()">
+🗑️ حذف جميع التقارير
+</button>
+
+</div>
+
+
+<script>
+
+const reportsContainer = document.getElementById("reports");
+
+const reports = JSON.parse(localStorage.getItem("scanHistory")) || [];
+
+
+if (reports.length === 0) {
+
+    reportsContainer.innerHTML = `
+
+    <div class="card">
+
+        <h2>لا توجد تقارير محفوظة</h2>
+
+        <p>
+        قم بإجراء فحص جديد حتى يظهر التقرير هنا.
+        </p>
+
+    </div>
+
+    `;
+
+} else {
+
+
+    reports.reverse().forEach(report => {
+
+
+        reportsContainer.innerHTML += `
+
+        <div class="card">
+
+            <h2>🛡️ CyberScan AI Report</h2>
+
+            <hr>
+
+            <p>
+            <strong>🌐 الموقع:</strong>
+            ${report.target}
+            </p>
+
+
+            <p>
+            <strong>🔒 درجة الأمان:</strong>
+            ${report.securityScore}/100
+            </p>
+
+
+            <p>
+            <strong>⚠️ مستوى الخطورة:</strong>
+            ${report.riskLevel}
+            </p>
+
+
+            <p>
+            <strong>📡 حالة الموقع:</strong>
+            ${report.websiteStatus}
+            </p>
+
+
+            <p>
+            <strong>🕒 وقت الفحص:</strong>
+            ${report.scanTime}
+            </p>
+
+
+        </div>
+
+        `;
+
+    });
+
+
+}
+
+
+
+function clearHistory() {
+
+
+    if(confirm("هل تريد حذف جميع التقارير؟")){
+
+
+        localStorage.removeItem("scanHistory");
+
+
+        location.reload();
+
+
+    }
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
