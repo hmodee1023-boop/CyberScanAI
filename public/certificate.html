@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<title>شهادة الفحص الأمنية | الحصن الرقمي</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.certificate{
+    max-width:800px;
+    margin:40px auto;
+    background:#111827;
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    text-align:center;
+    border:3px solid #D4AF37;
+    box-shadow:0 0 25px #000;
+}
+
+.logo{
+    font-size:50px;
+}
+
+h1{
+    color:#D4AF37;
+}
+
+.info{
+    background:#1f2937;
+    padding:20px;
+    margin-top:25px;
+    border-radius:15px;
+    line-height:2;
+    font-size:18px;
+}
+
+.score{
+    font-size:45px;
+    color:#00c853;
+    margin:20px;
+}
+
+button{
+    margin-top:25px;
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<div class="certificate">
+
+
+<div class="logo">
+🛡️
+</div>
+
+
+<h1>
+شهادة الفحص الأمنية
+</h1>
+
+
+<h2>
+الحصن الرقمي | CyberScan AI
+</h2>
+
+
+<p>
+تشهد هذه الوثيقة بأنه تم إجراء فحص أمني للموقع باستخدام نظام الحصن الرقمي
+</p>
+
+
+
+<div class="info">
+
+<p>
+🌐 الموقع:
+<br>
+<span id="site">---</span>
+</p>
+
+
+<p>
+📊 درجة الأمان:
+</p>
+
+<div class="score" id="score">
+0%
+</div>
+
+
+<p>
+⚠️ مستوى الخطورة:
+<br>
+<span id="risk">---</span>
+</p>
+
+
+<p>
+🕒 تاريخ الفحص:
+<br>
+<span id="date">---</span>
+</p>
+
+
+</div>
+
+
+
+<button onclick="window.print()">
+🖨️ طباعة الشهادة
+</button>
+
+
+<button onclick="window.location.href='index.html'">
+🏠 العودة للرئيسية
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+let history =
+JSON.parse(localStorage.getItem("scanHistory")) || [];
+
+
+let lastScan =
+history[history.length - 1];
+
+
+
+if(lastScan){
+
+
+let score =
+Number(lastScan.score || lastScan.securityScore || 0);
+
+
+
+document.getElementById("site").innerText =
+lastScan.url ||lastScan.target ||lastScan.website ||lastScan.site ||"غير معروف"
+
+
+document.getElementById("score").innerText =
+score + "%";
+
+
+
+if(score >= 80){
+
+document.getElementById("risk").innerText =
+"🟢 آمن";
+
+}
+else if(score >= 50){
+
+document.getElementById("risk").innerText =
+"🟡 متوسط";
+
+}
+else{
+
+document.getElementById("risk").innerText =
+"🔴 خطر";
+
+}
+
+
+
+document.getElementById("date").innerText =
+new Date().toLocaleDateString("ar-IQ");
+
+
+
+}
+
+else{
+
+
+document.getElementById("site").innerText =
+"لا يوجد فحص";
+
+document.getElementById("risk").innerText =
+"غير متوفر";
+
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>

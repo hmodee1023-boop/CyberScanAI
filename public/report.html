@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>الحصن الرقمي | CyberScan AI Report</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Cairo",sans-serif;
+}
+
+body{
+
+background:#edf2f7;
+
+padding:35px;
+
+}
+
+.report{
+
+max-width:1150px;
+
+margin:auto;
+
+background:white;
+
+border-radius:20px;
+
+overflow:hidden;
+
+box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.header{
+
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+
+padding:35px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+color:white;
+
+}
+
+.logo h1{
+
+font-size:40px;
+
+margin-bottom:8px;
+
+}
+
+.logo h2{
+
+color:#38bdf8;
+
+font-size:28px;
+
+margin-bottom:8px;
+
+}
+
+.logo p{
+
+font-size:15px;
+
+opacity:.9;
+
+}
+
+.version{
+
+background:#38bdf8;
+
+padding:12px 22px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+font-size:18px;
+
+}
+
+.score-box{
+
+display:flex;
+
+justify-content:center;
+
+padding:35px;
+
+}
+
+.score-circle{
+
+width:190px;
+
+height:190px;
+
+border-radius:50%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:55px;
+
+font-weight:bold;
+
+color:white;
+
+background:linear-gradient(135deg,#22c55e,#16a34a);
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+}
+
+.score-circle small{
+
+margin-top:10px;
+
+font-size:18px;
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+
+gap:20px;
+
+padding:0 35px 35px;
+
+}
+
+.card{
+
+background:#f8fafc;
+
+border-right:5px solid #0ea5e9;
+
+padding:20px;
+
+border-radius:15px;
+
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+
+}
+
+.card h3{
+
+margin-bottom:12px;
+
+color:#0f172a;
+
+}
+
+.card p{
+
+font-size:17px;
+
+font-weight:bold;
+
+color:#334155;
+
+}
+
+.section{
+
+padding:35px;
+
+}
+
+.section h2{
+
+margin-bottom:18px;
+
+padding-bottom:10px;
+
+border-bottom:3px solid #38bdf8;
+
+color:#0f172a;
+
+}
+
+.list{
+
+background:#f8fafc;
+
+border-radius:15px;
+
+padding:20px;
+
+}
+
+.list ul{
+
+padding-right:22px;
+
+}
+
+.list li{
+
+margin:12px 0;
+
+font-size:17px;
+
+}
+
+.footer{
+
+background:#0f172a;
+
+color:white;
+
+text-align:center;
+
+padding:30px;
+
+}
+
+.printBtn{
+
+width:calc(100% - 70px);
+
+margin:35px;
+
+padding:18px;
+
+border:none;
+
+border-radius:15px;
+
+background:#0ea5e9;
+
+color:white;
+
+font-size:20px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+.printBtn:hover{
+
+background:#0284c7;
+
+}
+
+@media print{
+
+.printBtn{
+
+display:none;
+
+}
+
+body{
+
+background:white;
+
+padding:0;
+
+}
+
+}
+
+</style>
+
+</head>
+<hr>
+
+        <h3>📋 تفاصيل الأمان</h3>
+
+        <div class="security-details">
+
+            <div class="detail-box">
+                <h4>🔐 SSL Certificate</h4>
+                <p>
+                    ${data.sslDetails || "لا توجد معلومات إضافية"}
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h4>🧱 Security Headers</h4>
+                <p>
+                    ${data.headerDetails || "لا توجد معلومات إضافية"}
+                </p>
+            </div>
+
+
+            <div class="detail-box">
+                <h4>🌐 Server Information</h4>
+                <p>
+                    ${data.serverDetails || "لا توجد معلومات إضافية"}
+                </p>
+            </div>
+
+        </div>
+
+
+        <hr>
+
+
+        <h3>🤖 تحليل الذكاء الاصطناعي</h3>
+
+        <div class="ai-box">
+
+            <p>
+            ${data.aiReport || 
+            "لم يتم إنشاء تحليل ذكي لهذا الفحص"}
+            </p>
+
+        </div>
+
+
+        <hr>
+
+
+        <h3>📌 التوصيات</h3>
+
+        <ul class="recommendations">
+
+            ${
+                data.recommendations
+                ?
+                data.recommendations
+                .map(item => `<li>${item}</li>`)
+                .join("")
+                :
+                "<li>لا توجد توصيات</li>"
+            }
+
+        </ul>
+
+
+    </div>
+
+    `;
+
+
+    // حفظ آخر تقرير
+    window.lastScanData = data;
+
+
+    // إظهار زر تحميل PDF
+    const pdfBtn = document.getElementById("downloadPdfBtn");
+
+    if(pdfBtn){
+
+        pdfBtn.style.display = "block";
+
+    }
+
+}
+// إنشاء وقت التقرير
+function getReportTime(){
+
+    const now = new Date();
+
+    return now.toLocaleString("ar-IQ");
+
+}
+
+
+
+// تجهيز بيانات التقرير
+function prepareReportData(scan){
+
+    return {
+
+        target: scan.target || "غير معروف",
+
+        scanTime:
+        scan.scanTime || getReportTime(),
+
+
+        securityScore:
+        scan.securityScore || 0,
+
+
+        riskLevel:
+        scan.riskLevel || "Unknown",
+
+
+        ssl:
+        scan.ssl || "غير متوفر",
+
+
+        headers:
+        scan.headers || "غير متوفر",
+
+
+        server:
+        scan.server || "غير متوفر",
+
+
+        aiAnalysis:
+        scan.aiAnalysis || "لا يوجد",
+
+
+        sslDetails:
+        scan.sslDetails || "لا توجد تفاصيل",
+
+
+        headerDetails:
+        scan.headerDetails || "لا توجد تفاصيل",
+
+
+        serverDetails:
+        scan.serverDetails || "لا توجد تفاصيل",
+
+
+        aiReport:
+        scan.aiReport || "لا يوجد تقرير ذكي",
+
+
+        recommendations:
+        scan.recommendations || []
+
+    };
+
+}

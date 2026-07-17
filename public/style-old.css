@@ -1,0 +1,2107 @@
+/* ===========================
+   حصن الرقمي | Premium Theme
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#05070d,#0b1220,#111827);
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* الخلفية */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#d4af3720,transparent 40%),
+    radial-gradient(circle at bottom,#2563eb15,transparent 40%);
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+    background-size:45px 45px;
+    z-index:-1;
+}
+
+/* الصندوق الرئيسي */
+.container{
+    width:100%;
+    max-width:900px;
+
+    background:rgba(18,24,38,.80);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    border-radius:22px;
+
+    padding:40px;
+
+    box-shadow:
+    0 0 40px rgba(0,0,0,.45),
+    0 0 15px rgba(212,175,55,.15);
+}
+
+/* العنوان */
+.logo{
+    text-align:center;
+    font-size:42px;
+    font-weight:800;
+    color:#D4AF37;
+    margin-bottom:8px;
+    letter-spacing:1px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#b8c2d0;
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+/* مربع الإدخال */
+input{
+    width:100%;
+    padding:17px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#0f172a;
+
+    color:#fff;
+
+    font-size:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+input:focus{
+
+    border-color:#D4AF37;
+
+    box-shadow:0 0 15px rgba(212,175,55,.25);
+
+}
+
+/* زر الفحص */
+button{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#D4AF37,#F7D774);
+
+    color:#111;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 30px rgba(212,175,55,.45);
+
+}
+
+/* التقرير */
+.report-box{
+
+    margin-top:35px;
+
+    background:#0f172a;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    animation:fade .5s;
+}
+
+.report-box h2{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.report-box p{
+
+    margin:14px 0;
+
+    color:#d7dce5;
+
+    font-size:15px;
+
+}
+
+/* دائرة السكور */
+
+.score-circle{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:conic-gradient(#D4AF37 82%,#1f2937 0);
+
+    box-shadow:
+    0 0 25px rgba(212,175,55,.35);
+
+}
+
+/* كروت النتائج */
+
+.card{
+
+    background:#111827;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    margin-top:15px;
+
+    border-left:4px solid #D4AF37;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    background:#162033;
+
+}
+
+/* تحميل PDF */
+
+.download-btn{
+
+    margin-top:25px;
+
+    background:linear-gradient(135deg,#2563EB,#1D4ED8);
+
+    color:white;
+
+}
+
+.download-btn:hover{
+
+    box-shadow:0 0 25px rgba(37,99,235,.45);
+
+}
+
+/* الأنيميشن */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/* ===========================
+   حصن الرقمي | Premium Theme
+=========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Cairo',sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#05070d,#0b1220,#111827);
+    color:#fff;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:40px;
+}
+
+/* الخلفية */
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:
+    radial-gradient(circle at top,#d4af3720,transparent 40%),
+    radial-gradient(circle at bottom,#2563eb15,transparent 40%);
+    z-index:-2;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    inset:0;
+    background-image:
+        linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+        linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+    background-size:45px 45px;
+    z-index:-1;
+}
+
+/* الصندوق الرئيسي */
+.container{
+    width:100%;
+    max-width:900px;
+    margin:50px auto;
+    padding:40px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    background:rgba(18,24,38,.85);
+    backdrop-filter:blur(15px);
+
+    border-radius:20px;
+    border:1px solid rgba(255,255,255,.08);
+};
+
+
+/* العنوان */
+.logo{
+    text-align:center;
+    font-size:42px;
+    font-weight:800;
+    color:#D4AF37;
+    margin-bottom:8px;
+    letter-spacing:1px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#b8c2d0;
+    margin-bottom:35px;
+    font-size:16px;
+}
+
+/* مربع الإدخال */
+input{
+    width:100%;
+    padding:17px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#0f172a;
+
+    color:#fff;
+
+    font-size:16px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+}
+
+input:focus{
+
+    border-color:#D4AF37;
+
+    box-shadow:0 0 15px rgba(212,175,55,.25);
+
+}
+
+/* زر الفحص */
+button{
+
+    width:100%;
+
+    margin-top:18px;
+
+    padding:17px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(135deg,#D4AF37,#F7D774);
+
+    color:#111;
+
+    font-size:18px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.35s;
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:0 0 30px rgba(212,175,55,.45);
+
+}
+
+/* التقرير */
+.report-box{
+
+    margin-top:35px;
+
+    background:#0f172a;
+
+    border-radius:18px;
+
+    padding:25px;
+
+    border:1px solid rgba(255,255,255,.06);
+
+    animation:fade .5s;
+}
+
+.report-box h2{
+
+    color:#D4AF37;
+
+    margin-bottom:20px;
+
+}
+
+.report-box p{
+
+    margin:14px 0;
+
+    color:#d7dce5;
+
+    font-size:15px;
+
+}
+
+/* دائرة السكور */
+
+.score-circle{
+
+    width:170px;
+
+    height:170px;
+
+    border-radius:50%;
+
+    margin:25px auto;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:34px;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:conic-gradient(#D4AF37 82%,#1f2937 0);
+
+    box-shadow:
+    0 0 25px rgba(212,175,55,.35);
+
+}
+
+/* كروت النتائج */
+
+.card{
+
+    background:#111827;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    margin-top:15px;
+
+    border-left:4px solid #D4AF37;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-4px);
+
+    background:#162033;
+
+}
+
+/* تحميل PDF */
+
+.download-btn{
+
+    margin-top:25px;
+
+    background:linear-gradient(135deg,#2563EB,#1D4ED8);
+
+    color:white;
+
+}
+
+.download-btn:hover{
+
+    box-shadow:0 0 25px rgba(37,99,235,.45);
+
+}
+
+/* الأنيميشن */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+h1,
+h2,
+p{
+    text-align:center;
+}
+
+input{
+    width:80%;
+    max-width:600px;
+}
+
+button{
+    width:80%;
+    max-width:300px;
+}
+
+.tools{
+    width:100%;
+    margin-top:40px;
+}
+.header{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.header h1{
+    font-size:48px;
+    color:#D4AF37;
+    font-weight:800;
+    margin-bottom:10px;
+    letter-spacing:1px;
+}
+
+.header p{
+    color:#C5C7CE;
+    font-size:18px;
+}
+.site-title{
+    text-align:center;
+    font-size:48px;
+    color:#D4AF37;
+    margin-bottom:30px;
+    font-weight:bold;
+}
+.site-title{
+    font-size:34px;
+    font-weight:800;
+    color:#D4AF37;
+    text-align:center;
+}
+
+.site-subtitle{
+    font-size:18px;
+    color:#ffffff;
+    text-align:center;
+    margin-top:5px;
+}
+/* ===== الحصن الرقمي ===== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Tahoma,sans-serif;
+    background:#0b1120;
+    color:#fff;
+}
+
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:auto;
+    padding:30px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:50px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+    padding-bottom:20px;
+}
+
+.logo h1{
+    color:#D4AF37;
+    font-size:40px;
+}
+
+.logo p{
+    color:#9ca3af;
+    margin-top:5px;
+}
+
+.hero{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.hero h1{
+    font-size:42px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#bdbdbd;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+.scan-box{
+    max-width:700px;
+    margin:auto;
+}
+
+.scan-box input{
+    width:100%;
+    padding:18px;
+    border:none;
+    border-radius:12px;
+    background:#1f2937;
+    color:#fff;
+    font-size:18px;
+    margin-bottom:20px;
+}
+
+.scan-btn{
+    background:#D4AF37;
+    color:#111;
+    border:none;
+    padding:15px 35px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.scan-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:0 0 20px rgba(212,175,55,.4);
+}
+
+.dashboard{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:20px;
+    margin:50px 0;
+}
+
+.card{
+    background:#111827;
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:18px;
+    padding:25px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px rgba(212,175,55,.15);
+}
+
+.card h2,
+.card h3{
+    color:#D4AF37;
+    margin-bottom:15px;
+}
+
+.score-circle{
+    width:150px;
+    height:150px;
+    border:8px solid #D4AF37;
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:20px auto;
+    font-size:32px;
+    font-weight:bold;
+}
+
+.tools{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+    margin:50px 0;
+}
+
+.tool{
+    background:#111827;
+    border-radius:18px;
+    padding:25px;
+    text-align:center;
+    border:1px solid rgba(255,255,255,.08);
+    transition:.3s;
+}
+
+.tool:hover{
+    transform:translateY(-5px);
+    border-color:#D4AF37;
+}
+
+.tool i{
+    font-size:40px;
+    display:block;
+    margin-bottom:15px;
+}
+
+.tool h3{
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.tool p{
+    color:#bdbdbd;
+}
+
+.report-container{
+    margin-top:-10px;
+}
+
+.report-actions{
+    text-align:center;
+    margin-top:20px;
+}
+
+.download-btn{
+    background:#2563eb;
+    color:#fff;
+    border:none;
+    padding:14px 30px;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.download-btn:hover{
+    background:#1d4ed8;
+}
+.nav-right{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+}
+
+.bio{
+    color:#fff;
+    text-align:center;
+    font-size:14px;
+    opacity:.8;
+    max-width:220px;
+}
+.header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+
+padding:30px;
+
+border-radius:15px;
+
+color:white;
+
+margin-bottom:30px;
+
+}
+
+.logo h1{
+
+margin:0;
+
+font-size:34px;
+
+}
+
+.logo h2{
+
+margin:8px 0;
+
+font-size:28px;
+
+color:#38bdf8;
+
+}
+
+.subtitle{
+
+color:#dbeafe;
+
+font-size:15px;
+
+}
+
+.version{
+
+background:#38bdf8;
+
+padding:12px 20px;
+
+border-radius:30px;
+
+font-weight:bold;
+
+font-size:18px;
+
+}
+.score-box{
+
+display:flex;
+
+justify-content:center;
+
+margin:35px 0;
+
+}
+
+.score-circle{
+
+width:170px;
+
+height:170px;
+
+border-radius:50%;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#22c55e,#16a34a);
+
+color:white;
+
+box-shadow:0 10px 30px rgba(0,0,0,.25);
+
+font-weight:bold;
+
+transition:.4s;
+
+}
+
+.score-circle span{
+
+font-size:48px;
+
+}
+
+.score-circle small{
+
+margin-top:10px;
+
+font-size:16px;
+
+}
+.info-grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:20px;
+
+margin:35px 0;
+
+}
+
+.info-card{
+
+background:#f8fafc;
+
+border-left:5px solid #0ea5e9;
+
+padding:20px;
+
+border-radius:12px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+}
+
+.info-card h3{
+
+margin-bottom:10px;
+
+color:#0f172a;
+
+}
+
+.info-card p{
+
+font-size:17px;
+
+font-weight:bold;
+
+color:#334155;
+
+}
+.school-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 25px auto;
+    padding: 20px;
+    width: 90%;
+    direction: ltr;
+
+}
+
+
+.student-info {
+
+    text-align: left;
+    direction: rtl;
+    font-size: 16px;
+
+}
+
+
+.school-info {
+
+    text-align: center;
+    direction: rtl;
+
+}
+
+
+.school-info img {
+
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+
+}
+
+
+.school-header h3 {
+
+    margin-bottom: 10px;
+
+}
+
+
+.school-header p {
+
+    margin: 6px 0;
+
+}
+.logo-section{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+.main-logo{
+    width:140px;
+    height:auto;
+    display:block;
+    margin:0 auto 15px;
+    filter:drop-shadow(0 0 20px rgba(0,255,255,.35));
+}
+
+.logo-section h1{
+    font-size:42px;
+    color:#D4AF37;
+    margin:0;
+}
+
+.logo-section p{
+    color:#00E5FF;
+    font-size:22px;
+    margin-top:8px;
+}
+.main-logo{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    display:block;
+    margin-bottom:10px;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:30px;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.title-box h1{
+    color:#FFD700;
+    margin:0;
+    font-size:42px;
+}
+
+.title-box h2{
+    color:#00E5FF;
+    margin:5px 0;
+}
+
+.title-box h3{
+    color:#ffffff;
+    margin:0;
+    font-size:18px;
+}
+
+.nav-right{
+    text-align:right;
+}
+
+.students-list{
+    margin-top:10px;
+    padding-right:20px;
+}
+
+.students-list li{
+    margin:5px 0;
+    color:#fff;
+}
+.main-logo{
+    width:110px;
+    height:110px;
+    border-radius:50%;
+    display:block;
+}
+
+.navbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.nav-left{
+    display:flex;
+    align-items:center;
+    gap:20px;
+}
+
+.title-box h1{
+    margin:0;
+    color:#D4AF37;
+    font-size:40px;
+}
+
+.title-box h2{
+    margin:5px 0;
+    color:#00d4ff;
+}
+
+.title-box h3{
+    margin:0;
+    color:#ffffff;
+    font-size:18px;
+}
+
+.nav-right{
+    text-align:right;
+    color:#ffffff;
+}
+
+.nav-right h3{
+    color:#D4AF37;
+    margin:8px 0;
+}
+.top-logos{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 40px;
+}
+
+.top-logos img{
+    width:100px;
+    height:100px;
+    object-fit:contain;
+}
+
+.project-title{
+    text-align:center;
+}
+
+.project-title h1{
+    color:#D4AF37;
+    font-size:35px;
+    margin:0;
+}
+
+.project-title p{
+    font-size:22px;
+    margin-top:5px;
+}
+.main-cover{
+
+    min-height:100vh;
+    background:#071426;
+    color:white;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:40px;
+
+    direction:ltr;
+
+    font-family:Tahoma;
+}
+
+
+
+.left-side,
+.right-side,
+.center-side{
+
+    text-align:center;
+
+}
+
+
+
+.logout-btn,
+.bio-btn{
+
+    display:block;
+
+    width:180px;
+
+    margin:15px auto;
+
+    padding:12px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:#D4AF37;
+
+    color:#111;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+
+
+.students-box{
+
+    margin-top:20px;
+
+    padding:20px;
+
+    border:1px solid #D4AF37;
+
+    border-radius:15px;
+
+    background:rgba(255,255,255,0.05);
+
+}
+
+
+
+.students-box h3{
+
+    color:#D4AF37;
+
+}
+
+
+
+.center-side h1{
+
+    color:#D4AF37;
+
+    font-size:35px;
+
+}
+
+
+
+.school-logo{
+
+    width:180px;
+
+    margin-top:30px;
+
+}
+
+
+
+.cyber-logo{
+
+    width:180px;
+
+}
+
+
+
+.right-side h2{
+
+    color:#D4AF37;
+
+    font-size:35px;
+
+}
+
+
+
+.right-side{
+
+    text-align:center;
+
+    width:250px;
+
+    padding:15px;
+
+}
+
+
+.school-logo,
+
+
+  
+.hero{
+
+min-height:100vh;
+
+background:
+radial-gradient(circle at top,#20365c,#050914);
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:40px;
+
+color:white;
+
+direction:ltr;
+
+font-family:Tahoma;
+
+}
+
+
+
+/* زر الخروج */
+
+.logout{
+
+position:absolute;
+
+top:25px;
+
+left:30px;
+
+background:#D4AF37;
+
+border:none;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+font-size:17px;
+
+}
+
+
+
+/* بطاقة المعلومات */
+
+.side-card{
+
+background:rgba(255,255,255,0.08);
+
+backdrop-filter:blur(10px);
+
+border:1px solid rgba(212,175,55,.5);
+
+border-radius:25px;
+
+padding:25px;
+
+width:260px;
+
+text-align:center;
+
+}
+
+
+
+.side-card h3{
+
+color:#D4AF37;
+
+}
+
+
+
+.bio{
+
+background:#D4AF37;
+
+border:none;
+
+padding:12px;
+
+border-radius:20px;
+
+width:100%;
+
+margin-bottom:20px;
+
+}
+
+
+
+/* المدرسة */
+
+.school{
+
+text-align:center;
+
+}
+
+
+
+.school h1{
+
+color:#D4AF37;
+
+font-size:32px;
+
+}
+
+
+
+.school img{
+
+width:190px;
+
+height:190px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:5px solid #D4AF37;
+
+box-shadow:0 0 25px #D4AF37;
+
+}
+
+
+
+/* المشروع */
+
+.project{
+
+text-align:center;
+
+}
+
+
+
+.project img{
+
+width:180px;
+
+height:180px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+border:3px solid #D4AF37;
+
+}
+
+
+
+.project h1{
+
+color:#D4AF37;
+
+font-size:40px;
+
+}
+
+
+
+.project h2{
+
+font-size:28px;
+
+}
+
+
+
+.project p{
+
+font-size:18px;
+
+opacity:.8;
+
+}
+.cyber-logo{
+    border: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+}
+.scan-box{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    text-align:center;
+
+    margin:0 auto;
+
+}
+.scan-box input,
+.scan-box .scan-btn{
+
+    margin:10px auto;
+
+}
+.scan-box{
+    width:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    text-align:center;
+}
+
+.scan-box input{
+    width:400px;
+    text-align:center;
+}
+
+.scan-box .scan-btn{
+    margin-top:20px;
+}
+.hero{
+    text-align:center;
+    width:100%;
+}
+
+.hero h1,
+.hero p{
+    text-align:center;
+}
+
+.scan-box{
+    margin:30px auto;
+}
+.scan-box p,
+.scan-box span{
+    display:none;
+}
+.scan-title{
+
+    color:#D4AF37;
+
+    font-size:22px;
+
+    margin-bottom:15px;
+
+    text-align:center;
+
+}
+.scan-box{
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+}
+.scan-box,
+.hero{
+    background:transparent !important;
+    border:none !important;
+    box-shadow:none !important;
+    outline:none !important;
+}
+#logoutBtn{
+
+    position:fixed;
+
+    top:10px;
+
+    left:10px;
+
+    z-index:1000;
+
+    width:180px;
+
+
+}
+.hide-bio-btn{
+    display:none;
+}
+#downloadPdfBtn{
+    visibility:hidden;
+}
+#target{
+    width:500px;
+    height:55px;
+    font-size:18px;
+    margin-top:-20px;
+}
+.scan-box{
+    transform:translateY(-150px);
+}
+#target{
+    width:600px;
+    height:70px;
+    font-size:20px;
+    padding:15px 20px;
+    border-radius:25px;
+}
+#result,
+#results,
+.result-box{
+    margin-top:100px;
+    width:100%;
+    text-align:center;
+}
+.report-container{
+    margin-top:0;
+}
+.report-container{
+    margin-top:-80px !important;
+    transform:translateY(-80px);
+}
+.report-container{
+    margin-top:-50px !important;
+}
+#report{
+    position:relative;
+    top:-50px !important;
+}
+.report-box{
+    margin-top:-150px;
+}
+.scan-box .scan-btn{
+    margin:10px;
+}
+.scan-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+/* ===========================
+   أزرار الفحص الاحترافية
+=========================== */
+
+.scan-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:18px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.scan-buttons .scan-btn{
+
+    width:210px;
+    height:58px;
+
+    border:none;
+    border-radius:16px;
+
+    background:linear-gradient(135deg,#D4AF37,#F4D03F);
+
+    color:#111;
+    font-size:18px;
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:all .35s ease;
+
+    box-shadow:0 6px 18px rgba(212,175,55,.35);
+
+}
+
+.scan-buttons .scan-btn:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 12px 30px rgba(212,175,55,.65);
+
+}
+
+.scan-buttons .scan-btn:active{
+
+    transform:scale(.96);
+
+}
+
+.scan-buttons .scan-btn i{
+
+    margin-left:8px;
+
+}
+.scan-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.scan-buttons .scan-btn{
+    width:220px;
+    height:55px;
+}
+.scan-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.scan-buttons .scan-btn{
+    width:220px;
+    height:55px;
+}
+/* =========================
+   نافذة التفاصيل الأمنية
+========================= */
+
+.modal-content{
+    width:600px;
+    max-width:90%;
+    background:#111827;
+    border:2px solid #D4AF37;
+    border-radius:18px;
+    padding:25px;
+    color:#fff;
+    text-align:right;
+    box-shadow:0 0 30px rgba(0,0,0,.5);
+    position:relative;
+
+    margin:auto;
+}
+
+.modal-content{
+    width:600px;
+    max-width:90%;
+    background:#111827;
+    border:2px solid #D4AF37;
+    border-radius:18px;
+    padding:25px;
+    color:#fff;
+    text-align:right;
+    box-shadow:0 0 30px rgba(0,0,0,.5);
+    position:relative;
+}
+
+.modal-content h2{
+    color:#D4AF37;
+    margin-bottom:20px;
+}
+
+.modal-content p{
+    margin:12px 0;
+    font-size:17px;
+    border-bottom:1px solid rgba(255,255,255,.15);
+    padding-bottom:8px;
+}
+
+.close-modal{
+    position:absolute;
+    top:15px;
+    left:20px;
+    font-size:30px;
+    cursor:pointer;
+    color:#fff;
+    transition:.3s;
+}
+
+.close-modal:hover{
+    color:#D4AF37;
+}
+#securityDetailsBtn{
+    display:none;
+}
+.report-container{
+    margin-top: -70px;
+}
+/* ==========================
+   شريط درجة الأمان
+========================== */
+
+.security-bar{
+
+    width:100%;
+    height:18px;
+
+    background:#2d3748;
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+    margin:15px 0;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.security-fill{
+
+    height:100%;
+
+    width:0;
+
+    border-radius:20px;
+
+    transition:width .8s ease;
+
+}
+@media (max-width: 600px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    button {
+        width: 100%;
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+}
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    max-width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+@media (max-width: 600px) {
+
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .tools,
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+@media (max-width: 600px) {
+
+    h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .card {
+        padding: 12px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        padding: 10px;
+        margin: 5px 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+}
+@media (max-width: 600px) {
+
+    .container {
+        width: 95%;
+        margin: auto;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .info-card {
+        padding: 10px;
+    }
+
+}
+/* ===== واجهة البداية ===== */
+
+.hero:first-child{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-bottom:40px;
+}
+
+.side-card,
+.school,
+.project{
+    flex:1;
+    min-width:260px;
+    text-align:center;
+}
+
+.side-card{
+    background:rgba(255,255,255,.05);
+    border-radius:15px;
+    padding:20px;
+    border:1px solid rgba(255,255,255,.1);
+}
+
+.side-card h3{
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+.side-card p{
+    line-height:1.8;
+}
+
+.school img{
+    width:120px;
+    margin-top:15px;
+}
+
+.cyber-logo{
+    width:120px;
+    margin-bottom:15px;
+}
+
+.project h1{
+    color:#D4AF37;
+    font-size:40px;
+}
+
+.project h2{
+    color:#fff;
+    margin-top:10px;
+}
+
+.project p{
+    color:#ccc;
+    margin-top:10px;
+}
+
+/* ===== للموبايل ===== */
+
+@media (max-width:768px){
+
+.hero:first-child{
+    flex-direction:column;
+}
+
+.side-card,
+.school,
+.project{
+    width:100%;
+}
+
+.school img,
+.cyber-logo{
+    width:90px;
+}
+
+.project h1{
+    font-size:28px;
+}
+
+.school h1{
+    font-size:24px;
+}
+
+.side-card{
+    order:3;
+}
+
+.school{
+    order:1;
+}
+
+.project{
+    order:2;
+}
+
+}
+/* ===== إصلاحات للموبايل فقط ===== */
+@media (max-width:768px){
+
+    .nav-right{
+        width:100%;
+        display:flex;
+        flex-direction:column;
+        gap:10px;
+        margin-bottom:20px;
+    }
+
+    .nav-right button{
+        width:100%;
+        max-width:none;
+    }
+
+    .hero:first-child{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        gap:20px;
+    }
+
+    .school,
+    .project,
+    .side-card{
+        width:100%;
+        max-width:350px;
+    }
+
+    .school h1,
+    .project h1{
+        font-size:28px;
+    }
+
+    .project h2{
+        font-size:22px;
+    }
+
+    .school img,
+    .cyber-logo{
+        width:120px;
+        height:auto;
+    }
+
+    .scan-box{
+        width:100%;
+    }
+
+    .scan-box input{
+        width:100%;
+    }
+
+    .scan-buttons{
+        display:flex;
+        flex-direction:column;
+        gap:12px;
+    }
+
+    .scan-buttons button{
+        width:100%;
+        max-width:none;
+    }
+}
+@media (max-width:768px){
+
+    .nav-right{
+        position:static !important;
+        width:100%;
+        margin:20px 0;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+
+}

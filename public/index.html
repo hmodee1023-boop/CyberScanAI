@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🛡️ الحصن الرقمي - CyberScan AI</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="container">
+
+
+<!-- الهيدر -->
+<div class="hero">
+
+    <!-- اليسار -->
+    <div class="side-card">
+        <h3>إعداد الطلبة</h3>
+
+        <p>
+        أحمد ماجد<br>
+        رضا حسنين<br>
+        حسين علي<br>
+        حسين عمار<br>
+        علي عمران
+        </p>
+
+        <hr>
+
+        <h3>إشراف المهندس</h3>
+
+        <p>
+        عمار علي رزاق
+        </p>
+    </div>
+
+
+    <!-- الوسط -->
+    <div class="school">
+        <img src="school-logo.png">
+
+        <h1>
+        إعدادية النخبة المهنية الأهلية
+        </h1>
+    </div>
+
+
+    <!-- اليمين -->
+    <div class="project">
+
+        <img src="images/cyberscan-logo.png" class="cyber-logo">
+
+        <h1>
+<img src="images/shield.svg" class="shield-logo">
+الحصن الرقمي
+</h1>
+
+        <h2>
+        CyberScan AI
+        </h2>
+
+        <p>
+        نظام فحص وحماية المواقع الذكي
+        </p>
+
+    </div>
+
+</div>
+
+
+
+</div>
+<!-- شريط التحكم -->
+
+<div class="nav-right">
+
+<h3 id="welcomeUser"></h3>
+
+
+<button id="logoutBtn" class="scan-btn">
+🚪 تسجيل الخروج
+</button>
+
+
+</div>
+
+
+
+
+
+<!-- صندوق الفحص -->
+
+<div class="card scan-box">
+
+
+<h2>
+🔍 أدخل رابط الموقع للفحص الأمني
+</h2>
+
+
+<input 
+id="target"
+type="text"
+placeholder="https://example.com">
+
+
+
+<div class="scan-buttons">
+
+
+<button class="scan-btn" onclick="startScan()">
+🔍 بدء الفحص
+</button>
+
+
+<button id="rescanBtn" class="scan-btn">
+🔄 إعادة الفحص
+</button>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- لوحة النتائج -->
+
+<div class="dashboard">
+
+
+<div class="card score-card">
+
+
+<h3>
+درجة الأمان
+</h3>
+
+
+<div class="score-circle">
+
+<span id="securityScore">
+--
+</span>
+
+
+</div>
+
+<p>
+<strong>🏆 التقييم الأمني:</strong>
+
+<span class="security-grade">
+${securityGrade}
+</span>
+
+</p>
+
+</div>
+
+
+
+
+
+<div class="card info-card">
+
+<h3>
+⚠️ مستوى الخطورة
+</h3>
+
+<p id="riskLevel">
+--
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card info-card">
+
+<h3>
+🌐 IP الموقع
+</h3>
+
+<p id="ipCard">
+--
+</p>
+
+
+</div>
+
+
+
+
+<div class="card info-card">
+
+<h3>
+⚡ سرعة الاستجابة
+</h3>
+
+<p id="responseCard">
+--
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="card info-card">
+
+<h3>
+🔐 SSL
+</h3>
+
+<p id="sslCard">
+--
+</p>
+
+
+</div>
+
+
+
+
+<div class="card info-card">
+
+<h3>
+🕒 وقت الفحص
+</h3>
+
+<p id="timeCard">
+--
+</p>
+
+
+</div>
+
+
+
+</div>
+
+<!-- التقرير -->
+
+<div class="card">
+
+
+<h2>
+📊 نتيجة الفحص
+</h2>
+
+<div id="scanLoading" class="scan-loading">
+
+    <div class="loader"></div>
+
+    <h3>🔍 جاري فحص الموقع...</h3>
+
+    <p id="scanStep">
+        بدء التحليل الأمني
+    </p>
+
+</div>
+
+<div id="report">
+
+</div>
+
+
+</div>
+
+
+
+<!-- الأدوات -->
+
+<div class="tools">
+
+
+<div class="tool">
+
+<i>🛡️</i>
+
+<h3>SSL</h3>
+
+<p>
+فحص شهادة SSL
+</p>
+
+</div>
+
+
+
+
+<div class="tool">
+
+<i>🌐</i>
+
+<h3>DNS</h3>
+
+<p>
+تحليل سجلات DNS
+</p>
+
+</div>
+
+
+
+
+
+<div class="tool">
+
+<i>📡</i>
+
+<h3>Headers</h3>
+
+<p>
+فحص رؤوس HTTP
+</p>
+
+</div>
+
+
+
+
+
+<div class="tool">
+
+<i>🍪</i>
+
+<h3>Cookies</h3>
+
+<p>
+تحليل ملفات الارتباط
+</p>
+
+</div>
+
+
+
+
+
+<div class="tool">
+
+<i>⚠️</i>
+
+<h3>Security</h3>
+
+<p>
+تحليل مستوى الأمان
+</p>
+
+</div>
+
+
+
+
+
+<div class="tool">
+
+<i>📄</i>
+
+<h3>Report</h3>
+
+<p>
+تقرير الفحص
+</p>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- الذكاء الاصطناعي -->
+
+
+<div class="card">
+
+
+<h2>
+🤖 تحليل الذكاء الاصطناعي
+</h2>
+
+
+<p>
+
+يقوم CyberScan AI بتحليل نتائج الفحص وتقديم تقييم أمني أولي مع اقتراحات لتحسين حماية الموقع.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<!-- معلومات المشروع -->
+
+
+<div class="card">
+
+
+<h2>
+📌 معلومات المشروع
+</h2>
+
+
+<p>
+
+الحصن الرقمي منصة عربية متخصصة في فحص المواقع الإلكترونية وتحليل الحماية وإنشاء تقارير أمنية احترافية.
+
+</p>
+
+
+</div>
+<!-- صفحات المشروع -->
+
+<div class="card">
+
+
+<h2>
+📄 صفحات المشروع
+</h2>
+
+
+
+<button class="scan-btn" onclick="window.location.href='about.html'">
+📖 عن المشروع
+</button>
+
+
+<button class="scan-btn" onclick="window.location.href='history.html'">
+📜 سجل الفحوصات
+</button>
+
+
+<button class="scan-btn" onclick="window.location.href='statistics.html'">
+📊 الإحصائيات
+</button>
+
+
+<button class="scan-btn" onclick="window.location.href='protection.html'">
+🛡️ دليل الحماية
+</button>
+
+
+<button class="scan-btn" onclick="window.location.href='ai-analysis.html'">
+🧠 تحليل الذكاء الاصطناعي
+</button>
+
+
+<button class="scan-btn" onclick="window.location.href='certificate.html'">
+🏆 شهادة الفحص
+</button>
+
+
+</div>
+
+
+
+</div> <!-- نهاية container -->
+
+
+
+
+
+<!-- نافذة التفاصيل (مخفية بدون زر) -->
+
+<div id="securityModal" class="modal">
+
+<div class="modal-content">
+
+<span class="close-modal">
+&times;
+</span>
+
+
+<h2>
+🔐 التفاصيل الأمنية
+</h2>
+
+
+<div id="securityDetails"></div>
+
+
+</div>
+
+</div>
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+
+<script src="vfs_fonts.js"></script>
+
+
+<script src="https://cdn.jsdelivr.net/npm/arabic-persian-reshaper@1.0.1/dist/arabic-persian-reshaper.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bidi-js@1.0.3/dist/bidi.min.js"></script>
+
+
+<script src="script.js"></script>
+
+
+
+</body>
+
+</html>

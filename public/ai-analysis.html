@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+<meta charset="UTF-8">
+<title>تحليل الذكاء الاصطناعي | الحصن الرقمي</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+.ai-container{
+    padding:20px;
+}
+
+.ai-card{
+    background:#111827;
+    color:white;
+    padding:25px;
+    border-radius:18px;
+    margin-top:20px;
+    box-shadow:0 0 15px #0005;
+    border-top:4px solid #D4AF37;
+}
+
+.ai-card h2{
+    color:#D4AF37;
+}
+
+.result{
+    font-size:18px;
+    line-height:2;
+}
+
+.safe{
+    color:#00c853;
+}
+
+.warning{
+    color:#ffc107;
+}
+
+.danger{
+    color:#ff1744;
+}
+
+</style>
+
+</head>
+
+<body>
+
+
+<div class="container ai-container">
+
+
+<h1>🧠 تحليل الذكاء الاصطناعي</h1>
+
+<p>
+CyberScan AI - تحليل أمني ذكي لنتائج الفحص
+</p>
+
+
+
+<div class="ai-card">
+
+<h2>📊 حالة الموقع</h2>
+
+<div id="status" class="result">
+جاري التحليل...
+</div>
+
+</div>
+
+
+
+<div class="ai-card">
+
+<h2>⚠️ المشاكل المكتشفة</h2>
+
+<div id="issues" class="result">
+</div>
+
+</div>
+
+
+
+<div class="ai-card">
+
+<h2>💡 التوصيات الذكية</h2>
+
+<div id="recommendations" class="result">
+</div>
+
+</div>
+
+
+
+<button onclick="window.location.href='index.html'">
+🏠 العودة للرئيسية
+</button>
+
+
+</div>
+
+
+
+<script>
+
+
+let history = JSON.parse(localStorage.getItem("scanHistory")) || [];
+
+
+let lastScan = history[history.length - 1];
+
+
+let status = document.getElementById("status");
+let issues = document.getElementById("issues");
+let recommendations = document.getElementById("recommendations");
+
+
+
+if(!lastScan){
+
+status.innerHTML =
+"❌ لا توجد نتائج فحص للتحليل";
+
+}
+
+else{
+
+
+let score = Number(
+lastScan.score || lastScan.securityScore || 0
+);
+
+
+
+if(score >= 80){
+
+status.innerHTML =
+`<span class="safe">
+🟢 الموقع آمن بدرجة ${score}%
+</span>`;
+
+}
+else if(score >= 50){
+
+status.innerHTML =
+`<span class="warning">
+🟡 الموقع يحتاج تحسين بدرجة ${score}%
+</span>`;
+
+}
+else{
+
+status.innerHTML =
+`<span class="danger">
+🔴 الموقع يحتاج معالجة عاجلة بدرجة ${score}%
+</span>`;
+
+}
+
+
+
+let problems = [];
+let tips = [];
+
+
+
+if(!lastScan.https){
+
+problems.push("❌ الاتصال غير مشفر HTTPS");
+
+tips.push("تفعيل شهادة SSL لحماية الاتصال");
+
+}
+
+
+
+if(!lastScan.headers){
+
+problems.push("⚠️ نقص في إعدادات حماية Headers");
+
+tips.push("إضافة رؤوس أمان مثل CSP و HSTS");
+
+}
+
+
+
+if(problems.length === 0){
+
+problems.push("✅ لم يتم اكتشاف مشاكل رئيسية");
+
+tips.push("استمر بالمراقبة والفحص الدوري");
+
+}
+
+
+
+issues.innerHTML = problems.join("<br>");
+
+recommendations.innerHTML = tips.join("<br>");
+
+}
+
+
+
+</script>
+
+
+</body>
+
+</html>
